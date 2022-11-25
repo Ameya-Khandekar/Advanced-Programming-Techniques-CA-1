@@ -17,4 +17,11 @@ class Employee:
         grosspay += (self.rate * self.weeklyhours) + weeklytaxcredit
     if grosspay < 0:
         print("Gross Pay amount invalid ")
+        
+        return 0 
+    return grosspay
+
+    def computetax(self,grosspay)
+        
+        
     
