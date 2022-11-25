@@ -5,3 +5,16 @@ class Employee:
         self.rate = rate
         self.overtimeRate = overtimeRate
         self.weeklytaxcredit = weeklytaxcredit
+   
+    def computeWeeklyPay(self, hours):
+        grosspay = 0
+
+    if hours > self.weeklyhours:
+        self.weeklytaxcredit = hours - self.weeklyhours
+    else:
+        self.weeklytaxcredit = self.weeklyhours - hours
+        weeklytaxcredit *= self.overtimeRate
+        grosspay += (self.rate * self.weeklyhours) + weeklytaxcredit
+    if grosspay < 0:
+        print("Gross Pay amount invalid ")
+    
